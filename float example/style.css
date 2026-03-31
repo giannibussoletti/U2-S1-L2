@@ -16,7 +16,7 @@ section div img {
   float: left;
 }
 
-section div p:last-of-type {
+.clear-class {
   clear: left;
 }
 

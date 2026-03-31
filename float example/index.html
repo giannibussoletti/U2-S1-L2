@@ -49,13 +49,21 @@
             questo caso va applicato <code>clear</code> che permetterà di far tornare la pagina con
             le regole base di ogni elemento
           </p>
-          <p>
+          <p id="paragraphClear" class="clear-class">
             Questo paragrafo ha un valore di <code>clear:left</code> da questo elemento in poi tutti
             gli elementi futuri riavranno il loro comportamento normale
           </p>
         </div>
       </section>
     </main>
-    <footer>FOOTER</footer>
+    <footer>
+      <p>
+        Se il paragrafo non avesse avuto <code>clear</code>questo footer sarebbe finito sempre a
+        destra dell'immagine
+      </p>
+      <button onclick="removeClear()">Togli il clear</button>
+      <button onclick="addClear()">Aggiungi il clear</button>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
