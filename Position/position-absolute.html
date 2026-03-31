@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: lightgrey;
+      }
+      .absolute {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: aquamarine;
+        margin: 0;
+        font-size: 2em;
+      }
+    </style>
+    <title>Position: static</title>
+  </head>
+  <body>
+    <header><h2>Position: static</h2></header>
+    <main>
+      <p>
+        Questa proprietà determina la posizione dell'elemento nel documento <br />
+        NOTA BENE: LA PROPRIETÀ POSITION <b>NON È INTESA</b> COME STRUMENTO DI <b>IMPAGINAZIONE</b>
+      </p>
+      <p>Per impaginare in maniera corretta si usa display</p>
+      <p>
+        ma può essere utile per fare micro aggiustamenti o andare a sovrapporre coscenziosamente
+        alcuni elementi.
+      </p>
+      <p>
+        <code>position: absolute</code> permette di definire un posizionamento assoluto
+        dell'elemento a cui è assegnato. Grazie alle proprietà
+        <code>left; right; top; bottom;</code> si può ancorare l'elemento ad un riferimento
+        all'interno della pagina. Un elemento dotato di <code>absolute</code> cercherà fra i suoi
+        ancestors un altro elemento dotato di position non static e lo prenderà come riferimento per
+        la sua posizione. Se non c'è nessun elemento con questa proprietà, l'elemento assoluto
+        prenderà come riferimento i bordi del documento. Con absolute come con relative l'elemento
+        viene "staccato" dalla pagina e può essere posizionato ovunque a seconda del primo
+        contenitore ancestor che ha un altro position assegnato che non sia static.
+      </p>
+
+      <article>
+        <p class="absolute">questo paragrafo è posizionato con <code>"position: absolute"</code></p>
+
+        <p></p>
+      </article>
+    </main>
+    <footer>FOOTER DI BASE</footer>
+  </body>
+</html>
