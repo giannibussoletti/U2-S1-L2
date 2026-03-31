@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      #container {
+        width: 450px;
+        height: 450px;
+        border: 1px solid;
+        position: relative;
+        background-color: blueviolet;
+      }
+      .box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+      }
+
+      .box:nth-of-type(1) {
+        background-color: aqua;
+        left: 2em;
+        top: 2em;
+        z-index: 3;
+      }
+      .box:nth-of-type(1) p {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 1em;
+        font-size: 1.188em;
+      }
+      .box:nth-of-type(2) {
+        background-color: red;
+        left: 1em;
+        top: 1em;
+      }
+      .box:nth-of-type(3) {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>z-index</h2>
+    </header>
+    <main>
+      <p>
+        Normalmente il broswer genera gli elementi html in ordine cronologico, andando dall'inizio
+        della pagina fino alla fine,(da alto a basso). Quello che fa <code>z-index</code>, è dare
+        una visualizzazione prioritaria rispetto agli atri elementi della pagina. i valori di
+        z-index sono numeri interi senza misure (1,2,3 etc.) e possono essere sia positivi che
+        negativi, più è alto il numero maggiore sarà la sua importanza a livello visivo, andando a
+        coprire gli altri elementi che hanno uno <code>z-index</code> più basso. Il suo default è
+        <code>z-index: auto;</code>.
+      </p>
+      <section id="container">
+        <article class="box">
+          <p>
+            Questa box è la prima ad essere disegnata, ma avendo <code>z-index:3</code> viene
+            posizionata sopra le altre box
+          </p>
+        </article>
+        <article class="box"></article>
+        <article class="box"></article>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
