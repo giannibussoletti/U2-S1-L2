@@ -6,14 +6,11 @@
     <style>
       body {
         background-color: lightgrey;
-        margin: 0;
       }
-      .fixed {
-        position: fixed;
+      .sticky {
+        position: sticky;
         background-color: aquamarine;
-        font-family: "Courier New", Courier, monospace;
-        bottom: 0;
-        margin: 0;
+        top: 0;
       }
 
       footer {
@@ -23,10 +20,10 @@
         text-align: center;
       }
     </style>
-    <title>Position: fixed</title>
+    <title>Position: sticky</title>
   </head>
   <body>
-    <header><h2>Position: fixed</h2></header>
+    <header><h2>Position: sticky</h2></header>
     <main>
       <p>
         Questa proprietà determina la posizione dell'elemento nel documento <br />
@@ -38,13 +35,14 @@
         alcuni elementi.
       </p>
       <p>
-        <code>position: fixed</code> permette di ancorare un elemento al viewport. Questo rende
-        l'elemento "ancorato" NON influenzabile dallo SCROLL della pagina, ma dalla sua visuale
+        <code>position: sticky</code> assegna all'elemento un comportamento ibrido. Si comporterà
+        come un position "relative" fino a che non si raggiungimento di un "punto di soglia"
+        (threshold). Quando il threshold viene raggiunto, si comporterà come un position fixed. Per
+        specificare il threshold si specifica con <code>top;bottom;left;right;</code> ed è
+        necessario che sia figlio diretto di un contenitore che scrolla
       </p>
+      <p class="sticky">questo paragrafo hè posizionato con <code>"position: sticky"</code></p>
 
-      <article>
-        <p class="fixed">questo paragrafo hè posizionato con <code>"position: fixed"</code></p>
-      </article>
       <article>
         <img src="https://placebear.com/400/460" alt="" />
       </article>
