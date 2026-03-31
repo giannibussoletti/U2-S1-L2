@@ -7,7 +7,16 @@
     <title>CSS positioning</title>
   </head>
   <body>
-    <header><h1>CSS positioning</h1></header>
+    <header>
+      <h1>CSS positioning</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
         <h2>Floating and Clearer</h2>
@@ -20,7 +29,7 @@
         >
         <p>
           Una volta impostato il float tutto quello che c'è sulla pagina si sposterà o a sinistra o
-          a destra in base al float assegnato all'oggetto. Per fare in modo che questa cosa non
+          a destra in base al float assegnato all'elemento. Per fare in modo che questa cosa non
           accada bisogna usare l'attributo clearer
         </p>
       </section>
@@ -29,18 +38,24 @@
         <div>
           <img src="https://placebear.com/400/400" alt="bear image" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nulla commodi incidunt
-            praesentium veniam asperiores at eum ratione eligendi! Ullam blanditiis accusantium
-            officia! Velit necessitatibus ipsa tempora voluptate aspernatur quos. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Aliquid, incidunt! Itaque cum vero aperiam,
-            labore at omnis veritatis error doloremque porro ipsa asperiores, delectus voluptates
-            veniam. Suscipit impedit iste maxime. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Et eum repellendus expedita in libero tempora? Voluptate, cumque consequuntur
-            placeat possimus hic tempore iusto ipsa dolorum commodi, sapiente saepe molestiae
-            fugiat.
+            <i
+              >Questi paragrafi sono affiancati all'immagine perché l'immagine ha uno stile
+              <code><b>float:left</b></code> applicato
+            </i>
+          </p>
+          <p>
+            Il problema principale di float è che porta tutto al lato dell'elemento a cui è stato
+            applicato. E va a far "perdere" eventuali margini o padding sul lato allineato. In
+            questo caso va applicato <code>clear</code> che permetterà di far tornare la pagina con
+            le regole base di ogni elemento
+          </p>
+          <p>
+            Questo paragrafo ha un valore di <code>clear:left</code> da questo elemento in poi tutti
+            gli elementi futuri riavranno il loro comportamento normale
           </p>
         </div>
       </section>
     </main>
+    <footer>FOOTER</footer>
   </body>
 </html>
