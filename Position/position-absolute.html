@@ -9,17 +9,23 @@
       }
       .absolute {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        left: 0;
+        top: 2em;
         background-color: aquamarine;
         margin: 0;
-        font-size: 2em;
+        font-size: 1.2em;
+      }
+      footer {
+        background-color: blueviolet;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
       }
     </style>
-    <title>Position: static</title>
+    <title>Position: absolute with parents</title>
   </head>
   <body>
-    <header><h2>Position: static</h2></header>
+    <header><h2>Position: absolute</h2></header>
     <main>
       <p>
         Questa proprietà determina la posizione dell'elemento nel documento <br />
@@ -38,8 +44,7 @@
         ancestors un altro elemento dotato di position non static e lo prenderà come riferimento per
         la sua posizione. Se non c'è nessun elemento con questa proprietà, l'elemento assoluto
         prenderà come riferimento i bordi del documento. Con absolute come con relative l'elemento
-        viene "staccato" dalla pagina e può essere posizionato ovunque a seconda del primo
-        contenitore ancestor che ha un altro position assegnato che non sia static.
+        viene "staccato" dalla pagina.
       </p>
 
       <article>

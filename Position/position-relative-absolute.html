@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: lightgrey;
+      }
+
+      .round-border {
+        border-radius: 50px;
+      }
+      .relative {
+        position: relative;
+        display: inline-block;
+      }
+      .new {
+        position: absolute;
+        background-color: red;
+        color: white;
+        border-radius: 50px;
+        padding: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        top: 0;
+        right: -2em;
+      }
+
+      footer {
+        background-color: blueviolet;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
+      }
+    </style>
+    <title>Position: absolute + relative</title>
+  </head>
+  <body>
+    <header><h2>Position: absolute + relative</h2></header>
+    <main>
+      <p>
+        Questa proprietà determina la posizione dell'elemento nel documento <br />
+        NOTA BENE: LA PROPRIETÀ POSITION <b>NON È INTESA</b> COME STRUMENTO DI <b>IMPAGINAZIONE</b>
+      </p>
+      <p>Per impaginare in maniera corretta si usa display</p>
+      <p>
+        ma può essere utile per fare micro aggiustamenti o andare a sovrapporre coscenziosamente
+        alcuni elementi.
+      </p>
+      <p>
+        Un elemento con <code>position: absolute</code> prenderà come riferimento il più vicino
+        ancestors(antenato) dotato di posizionamento, senza riferimento prende il documento. Nel
+        caso invece ci sia un genitore che ha una position non static prenderà come riferimento
+        quello e muovendolo con <code>top, bottom, left, right</code> prenderà i margini del
+        genitore come riferimento
+      </p>
+      <section id="cards">
+        <article class="relative">
+          <img class="round-border" src="https://placebear.com/200/300" alt="" />
+          <span class="new">NEW</span>
+        </article>
+      </section>
+    </main>
+    <footer>FOOTER DI BASE</footer>
+  </body>
+</html>
