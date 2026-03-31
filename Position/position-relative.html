@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: lightgrey;
+      }
+      .relative {
+        position: relative;
+        top: 3em;
+        right: 2em;
+        background-color: aquamarine;
+      }
+    </style>
+    <title>Position: relative</title>
+  </head>
+  <body>
+    <header><h2>Position: relative</h2></header>
+    <main>
+      <p>
+        Questa proprietà determina la posizione dell'elemento nel documento <br />
+        NOTA BENE: LA PROPRIETÀ POSITION <b>NON È INTESA</b> COME STRUMENTO DI <b>IMPAGINAZIONE</b>
+        <br />
+        Per impaginare in maniera corretta si usa display
+      </p>
+      <p>
+        ma può essere utile per fare micro aggiustamenti o andare a sovrapporre coscenziosamente
+        alcuni elementi.
+      </p>
+      <p>
+        <code>position: relative</code> parte dalla posizione dell'elemento base e può essere mosso
+        da li, non ne stravolge automaticamente la natura. Ma può essere spostato tramite quattro
+        tag che sono <code>left; right; top; bottom;</code> queste 4 proprietà possono avere anche
+        valori negativi.
+      </p>
+
+      <article>
+        <p class="relative">
+          questo paragrafo è posizionato con <code>"position:relative"</code> e questo elemento può
+          anche finire sopra altri elementi come in questo caso il footer.
+        </p>
+
+        <p></p>
+      </article>
+    </main>
+    <footer>FOOTER DI BASE</footer>
+  </body>
+</html>
